@@ -18,7 +18,7 @@ typing_extensions==4.12.2
 rich==13.9.4
 joblib==1.4.2
 protobuf==5.29.4
-scipy==1.10.1
+scipy>=1.13
 supabase==2.6.0
 realtime==1.0.6
 storage3==0.7.7
