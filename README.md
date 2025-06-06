@@ -28,7 +28,6 @@ Membangun model untuk memprediksi apakah seorang siswa berisiko mengalami dropou
 Membuat dashboard interaktif untuk menganalisis faktor-faktor yang memengaruhi kemungkinan siswa mengalami dropout.
 
 ### Persiapan
-
 Sumber data: 
 [![GitHub](https://img.shields.io/badge/GitHub-Dataset-black?logo=github)](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv)
 
@@ -37,7 +36,7 @@ Setup environment:
 - Pastikan sudah menginstall anaconda atau miniconda.
 - Buat virtual environment dengan perintah:
     ```
-    conda create -n penerapan_ds python=3.8 numpy=1.21.0
+    conda create -n penerapan_ds python=3.10
     ```
 - Aktifkan dengan perintah: 
     ```
@@ -54,11 +53,11 @@ Setup environment:
 ## Business Dashboard
 Sebelum membuat dashboard, cari feature yang paling berpengaruh terhadap label. Pencarian tersebut menggunakan model Gradient Boosting yang sebelumnya telah dibuat, berikut hasilnya:
 
-![featrf](./Images/XGBoost.png)
+   ![featrf](./Images/XGBoost.png)
 
 Dari feature yang paling relevan tersebut, akan dipilih beberapa yang teratas dan akan dilakukan analisis yang lebih lanjut. Analisis tersebut dilakukan menggunakan tool metabase sebagai tempat untuk membuat business dashboard. Analisis dilakukan hanya sebatas untuk siswa yang dropout. Berikut business dashboard tersebut.
 
-![dashboard](./riyan_zaenal_arifin-dashboard.png)
+   ![dashboard](./riyan_zaenal_arifin-dashboard.png)
 
 Dari dashboard tersebut, dapat diketahui bahwa:
 
@@ -76,18 +75,27 @@ Dari dashboard tersebut, dapat diketahui bahwa:
 - Dari 1.421 siswa, 67,8% (963) telah melunasi, sedangkan 32,2% (458) belum melunasi.
 
 ## Menjalankan Sistem Machine Learning
-Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
+Prototype sistem model machine learning dibangun dengan menggunakan ttreamlit. Setelah model machine learning melalui proses training, model masuk ke tahap deployement ke aplikasi web sederhana agar mudah digunakan oleh pihak sekolah. Pihak sekolah cukup input form data siswa yang akan diprediksi. Ketika pihak sekolah sudah input form dan klik 'Prediction', sistem akan memberikan daftar data yang sebelumnya diinput, hasil prediksi apakah siswa tersebut berisiko dropout, graduate, atau enrolled, serta probalilitas prediksinya. Berikut tampilan aplikasi web tersebut
+
+   ![dashboard streamlit](./Images/dashboard_streamlit.png)
+
+Aplikasi web tersebut bisa diakses melalui link berikut.
 
 ```
-
+https://dicoding-pds2-student-dropout-prediction.streamlit.app/
 ```
 
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Secara kesuluruhan, proyek ini sudah terlaksana dengan baik. Tujuan awal proyek ini sudah tercapai meliputi:
+- Pembuatan model machine learning untuk memprediksi siswa dropout, graduate, atau enrolled, 
+- Pembuatan dashboard intraktif untuk menganalisis siswa droput menggunakan tool metabase.
+- Tahap deployement model machine learning ke streamlit
+
+Akurasi model machine learning senenarnya sudah cukup baik, mencapai lebih dari 80%, tetapi terdapat indikasi bahwa model tersebut mengalami overfitting karena jarak akurasi data testing dan training lumayan cukup jauh. Namun, model tersebut juga sudah berhasil dikembangkan ke tahap deployement menggunakan streamlit, sehingga kedepannya bisa dikembangkan lagi yang lebih kompleks dengan penambahan fitur atau lainnya. Selain itu, dashboard metabase bisa dikembangkan lagi dengan menambah paramater untuk analisis yang lebih mendalam terkait siswa droput.
 
 ### Rekomendasi Action Items
 #### Program Pendampingan Akademik
-- Luncurkan program tutor atau mentoring untuk siswa yang mengalami penurunan unit lulus (dari 2,55 ke 1,94), terutama di Semester 2, untuk meningkatkan performa akademik.
+- Luncurkan program tutor atau mentoring untuk siswa yang mengalami penurunan unit lulus (dari 2,55 ke 1,94), terutama di semester 2, untuk meningkatkan performa akademik.
 #### Peningkatan Dukungan Keuangan
 - Tingkatkan jumlah beasiswa atau bantuan finansial, mengingat hanya 9,43% siswa yang mendapat beasiswa, dan 32,2% belum melunasi biaya kuliah, untuk mengurangi beban ekonomi.
 #### Konseling dan Intervensi Dini

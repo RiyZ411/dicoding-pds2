@@ -395,9 +395,16 @@ if st.button("Prediction"):
                         2: 'Enrolled'
                     }
         predicted_label = label_mapping.get(prediction, 'Unknown')
-        st.success(f"Hasil Prediksi: {predicted_label}")
         probabilities = model.predict_proba(df_scaled)[0]
         confidence = probabilities[prediction] * 100
-        st.success(f"Probabilitas Hasil Prediksi: {predicted_label} (Confidence: {confidence:.2f}%)")
+        if predicted_label == 'Dropout':
+            st.error(f"Hasil Prediksi: {predicted_label}")
+            st.error(f"Probabilitas: {confidence:.2f}%")
+        elif predicted_label == 'Enrolled':
+            st.warning(f"Hasil Prediksi: {predicted_label}")
+            st.warning(f"Probabilitas: {confidence:.2f}%")
+        else:
+            st.success(f"Hasil Prediksi: {predicted_label}")
+            st.success(f"Probabilitas: {confidence:.2f}%")
     except Exception as e:
         st.error(f"Gagal melakukan prediksi: {e}")
