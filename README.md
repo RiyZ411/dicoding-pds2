@@ -104,3 +104,7 @@ Akurasi model machine learning senenarnya sudah cukup baik, mencapai lebih dari 
 - Evaluasi dan sesuaikan kurikulum untuk memastikan kesesuaian dengan kemampuan siswa, terutama pada unit yang sering gagal diselesaikan.
 #### Kampanye Kesadaran Biaya Kuliah
 - Adakan kampanye atau jadwal pembayaran fleksibel untuk membantu 32,2% siswa yang belum melunasi biaya kuliah.
+
+### Kredensial Metabase:
+- email : riyanzaenal411@gmail.com
+- password : p1pds.dicoding
