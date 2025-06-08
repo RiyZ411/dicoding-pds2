@@ -61,18 +61,13 @@ Dari feature yang paling relevan tersebut, akan dipilih beberapa yang teratas da
 
 Dari dashboard tersebut, dapat diketahui bahwa:
 
-#### Rata-rata Unit Kurikuler (Curricular Units):
-- Semester 1: Siswa terdaftar mengambil rata-rata 5,82 unit, tetapi hanya 2,55 unit yang lulus.
-- Semester 2: Siswa terdaftar mengambil rata-rata 5,78 unit, dengan hanya 1,94 unit yang lulus.
-- Penurunan unit yang lulus dari 2,55 (Semester 1) ke 1,94 (Semester 2) menunjukkan potensi kesulitan akademik.
-#### Rata-rata Evaluasi Unit Kurikuler Semester 2:
-- Skala 0-14,35, dengan rata-rata 7,17, menunjukkan performa akademik sedang.
-#### Status Internasional:
-- Dari 1.389 siswa, hanya 32 (2,3%) adalah siswa internasional, sisanya dari dalam negeri.
-#### Pemegang Beasiswa:
-- Dari 1.421 siswa, 90,57% (1.287) tidak menerima beasiswa, dan 9,43% (134) adalah pemegang beasiswa.
-#### Biaya Kuliah:
-- Dari 1.421 siswa, 67,8% (963) telah melunasi, sedangkan 32,2% (458) belum melunasi.
+Siswa yang mengalami dropout menunjukkan pola kesulitan akademik dan tantangan finansial yang konsisten. Pada semester pertama, mereka rata-rata mengambil 5,82 unit kurikuler, namun hanya 2,55 unit yang berhasil diselesaikan. Kondisi ini memburuk pada semester kedua, di mana rata-rata unit yang diambil tetap tinggi (5,78 unit), tetapi hanya 1,94 unit yang lulus, menunjukkan adanya penurunan performa akademik.
+
+Lebih lanjut, performa akademik dalam evaluasi semester kedua tergolong sedang, dengan rata-rata nilai 7,17 dari skala maksimal 14,35, yang dapat mengindikasikan adanya kendala dalam menyerap materi pembelajaran.
+
+Dari sisi latar belakang, sebagian besar siswa merupakan penduduk lokal, dengan hanya 2,3% merupakan siswa internasional, sehingga faktor budaya atau bahasa mungkin tidak menjadi pengaruh utama. Selain itu, mayoritas siswa tidak menerima beasiswa (90,57%), yang berarti dukungan finansial terbatas mungkin berdampak pada keberlanjutan studi mereka. Hal ini didukung oleh data bahwa 32,2% siswa belum melunasi biaya kuliah, yang bisa menjadi beban psikologis dan ekonomi tambahan.
+
+Secara keseluruhan, kombinasi antara penurunan kinerja akademik, minimnya bantuan finansial, dan tunggakan biaya kuliah dapat menjadi faktor penting yang berkontribusi terhadap keputusan siswa untuk keluar dari sistem pendidikan.
 
 ## Menjalankan Sistem Machine Learning
 Prototype sistem model machine learning dibangun dengan menggunakan ttreamlit. Setelah model machine learning melalui proses training, model masuk ke tahap deployement ke aplikasi web sederhana agar mudah digunakan oleh pihak sekolah. Pihak sekolah cukup input form data siswa yang akan diprediksi. Ketika pihak sekolah sudah input form dan klik 'Prediction', sistem akan memberikan daftar data yang sebelumnya diinput, hasil prediksi apakah siswa tersebut berisiko dropout, graduate, atau enrolled, serta probalilitas prediksinya. Berikut tampilan aplikasi web tersebut
@@ -88,7 +83,7 @@ https://dicoding-pds2-student-dropout-prediction.streamlit.app/
 ## Conclusion
 Secara kesuluruhan, proyek ini sudah terlaksana dengan baik. Tujuan awal proyek ini sudah tercapai meliputi:
 - Pembuatan model machine learning untuk memprediksi siswa dropout, graduate, atau enrolled, 
-- Pembuatan dashboard intraktif untuk menganalisis siswa droput menggunakan tool metabase.
+- Pembuatan dashboard intraktif untuk menganalisis siswa dropout menggunakan tool metabase.
 - Tahap deployement model machine learning ke streamlit
 
 Akurasi model machine learning senenarnya sudah cukup baik, mencapai lebih dari 80%, tetapi terdapat indikasi bahwa model tersebut mengalami overfitting karena jarak akurasi data testing dan training lumayan cukup jauh. Namun, model tersebut juga sudah berhasil dikembangkan ke tahap deployement menggunakan streamlit, sehingga kedepannya bisa dikembangkan lagi yang lebih kompleks dengan penambahan fitur atau lainnya. Selain itu, dashboard metabase bisa dikembangkan lagi dengan menambah paramater untuk analisis yang lebih mendalam terkait siswa droput.
